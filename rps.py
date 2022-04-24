@@ -4,7 +4,7 @@ import random
 score = 0
 keep_going = True
 
-while keep_going == True:
+while keep_going == True: # Run as long as user has not specified 'Finish'
  choices = ["Rock","Paper","Scissors"]
  choice = input("Choose your move, 'Score' to see your current score, or 'Finish' to end game. \n")
  cpu_choice = random.choice(choices)
@@ -13,7 +13,8 @@ while keep_going == True:
  if choice == cpu_choice:
     print("Tie!")
     score = score
- elif choice == "Rock":
+ # All possible win / loss combinations
+ elif choice == "Rock": 
     if cpu_choice == "scissors":
         print("Win!")
         score = score + 1
@@ -49,7 +50,7 @@ while keep_going == True:
         print ("Game ended. Your score is negative. You have lost " + str(score) + " games")
   else:
         print ("The score was tied")
- else:
+ else: # For all other inputs not covered.
      print ("Invalid input. Please try again.")
 
 
